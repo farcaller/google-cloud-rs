@@ -70,7 +70,11 @@ impl Client {
     }
 
     /// Get a handle to a specific bucket.
-    pub async fn bucket(&mut self, name: &str) -> Result<Bucket, Error> {
+    pub async fn bucket(&mut self, name: &str, unverified: bool) -> Result<Bucket, Error> {
+        if unverified {
+            return Ok(Bucket::new(self.clone(), name));
+        }
+
         let inner = &self.client;
         let uri = format!(
             "{}/b/{}",
