@@ -13,7 +13,7 @@ use crate::pubsub::api::subscriber_client::SubscriberClient;
 use crate::pubsub::{Error, Subscription, Topic, TopicConfig};
 
 /// The Pub/Sub client, tied to a specific project.
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct Client {
     pub(crate) project_name: String,
     pub(crate) publisher: PublisherClient<Channel>,

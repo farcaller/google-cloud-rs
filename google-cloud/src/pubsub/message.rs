@@ -4,7 +4,7 @@ use crate::pubsub::api;
 use crate::pubsub::{Client, Error};
 
 /// Represents a received message (from a subscription).
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct Message {
     pub(crate) client: Client,
     pub(crate) data: Vec<u8>,
