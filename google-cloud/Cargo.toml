@@ -1,5 +1,5 @@
 [package]
-name = "google-cloud"
+name = "google-cloud-for-versionstore-operator"
 version = "0.2.1"
 description = "Asynchronous Rust bindings for Google Cloud Platform gRPC APIs"
 authors = ["Nicolas Polomack <nicolas@polomack.eu>"]
